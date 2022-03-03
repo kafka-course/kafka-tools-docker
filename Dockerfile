@@ -26,7 +26,6 @@ RUN ( pip install pip --upgrade && \
       pip install --upgrade setuptools && \
       pip install kafka-tools )
 
-
 RUN wget  https://dlcdn.apache.org/kafka/${KAFKA_VERSION}/kafka_${SCALA_VERSION}-${KAFKA_VERSION}.tgz -O /tmp/kafka.tgz
 RUN ( tar xfz /tmp/kafka.tgz -C /opt && \
       mv /opt/kafka_${SCALA_VERSION}-${KAFKA_VERSION} /opt/kafka && \
